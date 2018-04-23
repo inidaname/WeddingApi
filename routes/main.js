@@ -9,6 +9,7 @@ router.get("/", (req, res) => {
     });
 });
 
-router.post("/postMessages", main.thePost)
-router.get('/getMessages', auth, main.theGet)
+router.post("/postMessages", main.thePost);
+router.get('/getMessages', auth, main.theGet);
+router.get('/sendMail', main.sendMail)
 module.exports = router;
