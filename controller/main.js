@@ -61,14 +61,14 @@ exports.theGet = (req, res) => {
 }
 
 exports.sendMail = (req, res) => {
-  
+  console.log(req.body)
   transporter.sendMail({
   from: 'Hassan and Saratu <contact@adp.ng>', // sender address
   to: req.body.email, // list of receivers
-  subject: req.body.fullname + ' Thank You.', // Subject line
+  subject: req.body.name + ' Thank You.', // Subject line
   template: 'emailtempl', // email template
   context: {
-    full_name: req.body.fullname,
+    name: req.body.name,
 
   }
 }, function (err, info) {
